@@ -1,0 +1,56 @@
+<!--
+This is an HTML file for an alarm clock web app.
+
+The file contains:
+- a head section with a title and a link to the CSS stylesheet
+- a body section with:
+    - a clock face
+    - an alarm form with input fields for hour, minute, second, and AM/PM selection
+    - a "Set Alarm" button
+    - a section for displaying the list of alarms
+    - a script tag to link to the JavaScript file
+-->
+<html>
+
+<head>
+    <!-- Set the title of the web page -->
+    <title>Alarm Clock</title>
+    <!-- Link the CSS file to apply styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- The main clock div -->
+    <div id="clock">
+        <!-- The div to display the current time -->
+        <div id="clock-face"></div>
+        <!-- The alarm form to set a new alarm -->
+        <div id="alarm-form">
+            <label>Set Alarm:</label>
+            <!-- Input fields for hour, minute, and second -->
+            <input type="number" id="hour-input" min="1" max="12" placeholder="Hour">
+            <input type="number" id="minute-input" min="0" max="59" placeholder="Minute">
+            <input type="number" id="second-input" min="0" max="59" placeholder="Second">
+
+            <!-- AM/PM selection -->
+            <select id="ampm-select">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+
+            <!-- Button to set a new alarm -->
+            <button id="set-alarm-btn">Set Alarm</button>
+        </div>
+
+        <!-- The list of alarms -->
+        <div id="alarms-list">
+            <h3>Alarms:</h3>
+            <ul id="alarms-ul"></ul>
+        </div>
+    </div>
+
+    <!-- Link the JavaScript file to the HTML page -->
+    <script src="script.js"></script>
+</body>
+
+</html>
